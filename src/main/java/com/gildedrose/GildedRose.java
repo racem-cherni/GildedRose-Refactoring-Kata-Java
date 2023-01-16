@@ -39,6 +39,9 @@ class GildedRose {
                         if(sellIn>=0) qualityToDecrease=1;
                         else qualityToDecrease=2;
 
+                        // add product name Conjured case
+                        if(name.equals("Conjured Mana Cake")) qualityToDecrease*=2;
+
                         if(quality-qualityToDecrease<0) item.quality = 0;
                         else item.quality = item.quality - qualityToDecrease;
                     }
